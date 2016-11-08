@@ -1,3 +1,17 @@
+function addItem()
+{
+  var input;
+  input = document.getElementById("newItem").value;
+  var list;
+  list = document.getElementById("listDisplay");
+  var item;
+  item = document.createElement("li");
+  var itemName;
+  itemName = document.createTextNode(input);
+  item.appendChild(itemName);
+  list.appendChild(item);
+  document.getElementById("newItem").value = "";
+}
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
